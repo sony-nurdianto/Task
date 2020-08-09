@@ -1,0 +1,23 @@
+.tool-item a{
+    text-decoration: none;
+   
+}
+
+.tool-item{
+    margin-top : 5px
+}
+
+.tool-logo{
+    margin-top : 5px;
+    margin-right : 10px
+}
+
+mat-sidenav{
+    width : 200px
+}
+
+@media (max-width : 600px){
+    .tool-button{
+        margin-right: 10px;
+    }
+}

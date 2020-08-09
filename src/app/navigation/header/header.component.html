@@ -1,0 +1,15 @@
+<mat-toolbar>
+    <div class="tool-button" fxHide.lg fxHide.xl>
+        <button mat-mini-fab color="primary" (click)="onToggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <span class="tool-logo">My Application</span>
+    <div class="tool-item" fxLayoutGap="10px" fxHide.xs>
+        <a *ngIf="isAuth" routerLink="/">Home</a>
+        <a *ngIf="!isAuth" routerLink="/signup">signup</a>
+        <a *ngIf="!isAuth" routerLink="/login">Login</a>
+        <a *ngIf="isAuth" routerLink="/training">Training</a>
+        <a *ngIf="isAuth" style="cursor: pointer;" (click)="onLogout()">Logout</a>
+    </div>
+</mat-toolbar>

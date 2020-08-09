@@ -1,0 +1,12 @@
+.training{
+    margin-top: 6rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mat-tab-label {
+    color:white;
+    font-size :  20px;
+}
