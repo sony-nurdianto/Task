@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "Task"
+  "defaultProject": "Task",
+  "cli": {
+    "analytics": "84f1fffb-0854-4193-9167-0ceb1bd3914f"
+  }
 }

@@ -1,16 +1,17 @@
 <section class="new-training" fxLayout fxLayoutAlign="center">
-    <mat-card fxFlex.xs="100%" fxFlex="400px" fxLayout="column" fxLayoutGap="30px">
-        <mat-card-title fxLayoutAlign="center">
-            Time To Start Excercise
-        </mat-card-title>
-        <mat-card-content fxLayoutAlign="center">
-            <mat-form-field appearance="fill">
-                <mat-label>Training</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let excercise of excercises" value="crunches">
-                        Crunches
-                    </mat-option>
-                    <!-- <mat-option value="touch-toes">
+    <form (ngSubmit)="onStartTraining(f)" #f="ngForm">
+        <mat-card fxFlex.xs="100%" fxFlex="400px" fxLayout="column" fxLayoutGap="30px">
+            <mat-card-title fxLayoutAlign="center">
+                Time To Start Excercise
+            </mat-card-title>
+            <mat-card-content fxLayoutAlign="center">
+                <mat-form-field appearance="fill">
+                    <mat-label>Training</mat-label>
+                    <mat-select ngModel name="excercise" required>
+                        <mat-option *ngFor="let excercise of excercises " [value]="excercise.id">
+                            {{excercise.name}}
+                        </mat-option>
+                        <!-- <mat-option value="touch-toes">
                         Touch Toes
                     </mat-option>
                     <mat-option value="side-lunges">
@@ -19,12 +20,13 @@
                     <mat-option value="burpees">
                         Burpees
                     </mat-option> -->
-                </mat-select>
-            </mat-form-field>
+                    </mat-select>
+                </mat-form-field>
 
-        </mat-card-content>
-        <mat-card-actions fxLayoutAlign="center">
-            <button type="submit" mat-raised-button color="accent" mat-button (click)="onStartTraining()">Start</button>
-        </mat-card-actions>
-    </mat-card>
+            </mat-card-content>
+            <mat-card-actions fxLayoutAlign="center">
+                <button type="submit" mat-raised-button color="accent" mat-button [disabled]="f.invalid">Start</button>
+            </mat-card-actions>
+        </mat-card>
+    </form>
 </section>
